@@ -1,0 +1,31 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; margin: 0 0 0.5em; color: var(--navy-800); }
+h1 { font-size: clamp(2rem, 4.5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1em; }
+a { color: var(--blue-600); }
+img { max-width: 100%; display: block; }
+ul { margin: 0; padding: 0; list-style: none; }
+main:focus { outline: none; }
+:focus-visible { outline: 3px solid var(--cyan-400); outline-offset: 2px; border-radius: 4px; }
+.container { width: min(100% - 32px, var(--container)); margin-inline: auto; }
+.container--narrow { max-width: 780px; }
+.skip-link {
+  position: absolute; left: 16px; top: -60px; z-index: 100;
+  background: #fff; color: var(--navy-800); padding: 10px 16px; border-radius: 8px; font-weight: 600;
+}
+.skip-link:focus { top: 12px; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

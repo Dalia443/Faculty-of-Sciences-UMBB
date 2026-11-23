@@ -1,0 +1,12 @@
+# Dépendances d'exécution (versions vérifiées pour Python 3.14 / Windows x64)
+fastapi==0.165.0
+uvicorn==0.54.0
+SQLAlchemy==2.0.58
+alembic==1.20.1
+psycopg2-binary==2.9.13
+pydantic==2.14.4
+pydantic-settings==2.16.3
+PyJWT==2.15.1
+pwdlib[argon2]==0.4.2
+email-validator==2.4.0
+python-dotenv==1.2.4
